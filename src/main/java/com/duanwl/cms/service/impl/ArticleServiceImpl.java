@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.duanwl.cms.dao.ArticleMapper;
 import com.duanwl.cms.domain.Article;
 import com.duanwl.cms.service.ArticleService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 /**
  * 
  * @ClassName: ArticleServiceImpl 
@@ -21,10 +23,13 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Resource
 	ArticleMapper articleMapper;
+
 	@Override
-	public List<Article> selects() {
-		// TODO Auto-generated method stub
-		return articleMapper.selects();
+	public PageInfo<Article> selects(Article articles, Integer pageNum, Integer pageSize) {
+		PageHelper.startPage(pageNum, pageSize); 
+		List<Article> list = articleMapper.selects(articles);
+		return new PageInfo<Article>(list);
 	}
+	
 
 }

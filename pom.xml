@@ -35,18 +35,12 @@
   <!-- jar依赖 -->
 	<dependencies>
 		<!-- 依赖工具类 -->
-		<dependency>
-			<groupId>com.duanwl</groupId>
-  			<artifactId>duanwl-common</artifactId>
-  			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		<!-- <dependency>
+			  	<groupId>com.duanwl</groupId>
+  				<artifactId>duanwl-common</artifactId>
+  				<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
 		
-		<dependency>
-			<groupId>com.duanwl</groupId>
-  			<artifactId>duanwl-common</artifactId>
-  			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	
 	
 			<!-- spring 及springMVC -->
 		<dependency>

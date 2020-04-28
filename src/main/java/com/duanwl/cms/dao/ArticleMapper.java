@@ -12,6 +12,13 @@ import com.duanwl.cms.domain.Article;
  * @date: 2020年4月27日 下午5:47:41
  */
 public interface ArticleMapper { 
-	
-	List<Article> selects();
+	/**
+	 * 
+	 * @Title: selects 
+	 * @Description: 文章列表查询
+	 * @param articles
+	 * @return
+	 * @return: List<Article>
+	 */
+	List<Article> selects(Article articles);
 }

@@ -3,6 +3,7 @@ package com.duanwl.cms.service;
 import java.util.List;
 
 import com.duanwl.cms.domain.Article;
+import com.github.pagehelper.PageInfo;
 
 /**
  * 
@@ -12,5 +13,15 @@ import com.duanwl.cms.domain.Article;
  * @date: 2020年4月27日 下午5:50:12
  */
 public interface ArticleService {
-	List<Article> selects();
+	/**
+	 * 
+	 * @Title: selects 
+	 * @Description: 查询列表
+	 * @param articles
+	 * @param pageNum
+	 * @param pagesize
+	 * @return
+	 * @return: PageInfo<Article>
+	 */
+	PageInfo<Article>  selects(Article articles,Integer pageNum,Integer pageSize);
 }
