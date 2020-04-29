@@ -24,4 +24,24 @@ public interface ArticleService {
 	 * @return: PageInfo<Article>
 	 */
 	PageInfo<Article>  selects(Article articles,Integer pageNum,Integer pageSize);
+	
+	/**
+	 * 
+	 * @Title: select 
+	 * @Description: 文章详情
+	 * @param id
+	 * @return
+	 * @return: Article
+	 * 
+	 */
+	Article select(Integer id);
+	/**
+	 * 
+	 * @Title: insert 
+	 * @Description: 增加文章
+	 * @param article
+	 * @return
+	 * @return: int
+	 */
+	int insert(Article article);
 }

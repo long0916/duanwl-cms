@@ -18,8 +18,8 @@
 		<!-- head -->
 		<div class="row">
 			<div class="col-md-12"
-				style="background-color:#6633FF; height: 50px">
-				<img alt="" src="/resource/images/7.png" width="50px"
+				style="background-color: #3300FF; height: 50px">
+				<img alt="" src="/resource/images/3.png" width="50px"
 					height="50px"> <font color="white">个人中心</font>
 			</div>
 
@@ -28,8 +28,8 @@
 			<div class="col-md-2 bg-light" style="height: 550px">
 
 				<div class="list-group">
-					<a href="#" data="/articles" class="list-group-item list-group-item-action active">
-						我的文章 </a> <a href="#" class="list-group-item list-group-item-action">
+					<a href="#" data="/my/articles" class="list-group-item list-group-item-action active">
+						我的文章 </a> <a href="#" data="/my/publish" class="list-group-item list-group-item-action">
 						发布文章</a> <a href="#" class="list-group-item list-group-item-action">我的收藏</a>
 					<a href="#" class="list-group-item list-group-item-action">
 						我的评论</a> <a href="#"
@@ -40,17 +40,26 @@
 			</div>
 			 <!-- 中间内容区域 -->
 			<div class="col-md-10" id="center"></div>
+			<!-- 提前侵入kindeditor -->
+			<div style="display: none">
+				<jsp:include page="/resource/kindeditor/jsp/demo.jsp"></jsp:include>
+			</div>
 		</div>
 	</div>
 </body>
 <script type="text/javascript">
 	//文档就绪函数
 	 $(function(){
+		 //0 默认显示我的文章
+		 $("#center").load("/my/articles")
+		 
+		 
 		//1.为左侧菜单添加点击事件
 		$("a").click(function(){
 			//2/获取A标签的data
 			var url =$(this).attr("data");
-			//alert(url)
+			$("a").removeClass("active");//删除所有样式
+		    $(this).addClass("active");//为当前点击的菜单添加样式
 			//3 在中间区域加载url
 			$("#center").load(url);
 		})

@@ -23,12 +23,31 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Resource
 	ArticleMapper articleMapper;
-
+	/**
+	 * 我的列表
+	 */
 	@Override
 	public PageInfo<Article> selects(Article articles, Integer pageNum, Integer pageSize) {
 		PageHelper.startPage(pageNum, pageSize); 
 		List<Article> list = articleMapper.selects(articles);
 		return new PageInfo<Article>(list);
+	}
+	/**
+	 * 根据id查找文章
+	 */
+	@Override
+	public Article select(Integer id) {
+		// TODO Auto-generated method stub
+		return articleMapper.select(id);
+	}
+	/**
+	 * 添加文章
+	 * 发布文章
+	 */
+	@Override
+	public int insert(Article article) {
+		// TODO Auto-generated method stub
+		return articleMapper.insert(article);
 	}
 	
 
