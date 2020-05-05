@@ -15,15 +15,13 @@ import com.github.pagehelper.PageInfo;
 public interface ArticleService {
 	/**
 	 * 
-	 * @Title: selects 
-	 * @Description: 查询列表
-	 * @param articles
-	 * @param pageNum
-	 * @param pagesize
+	 * @Title: insert 
+	 * @Description: 增加文章
+	 * @param article
 	 * @return
-	 * @return: PageInfo<Article>
+	 * @return: int
 	 */
-	PageInfo<Article>  selects(Article articles,Integer pageNum,Integer pageSize);
+	int insert(Article article);
 	
 	/**
 	 * 
@@ -32,16 +30,19 @@ public interface ArticleService {
 	 * @param id
 	 * @return
 	 * @return: Article
-	 * 
 	 */
 	Article select(Integer id);
 	/**
 	 * 
-	 * @Title: insert 
-	 * @Description: 增加文章
-	 * @param article
+	 * @Title: selects 
+	 * @Description: 文章列表
+	 * @param articles
+	 * @param pageNum
+	 * @param pageSize
 	 * @return
-	 * @return: int
+	 * @return: PageInfo<Article>
 	 */
-	int insert(Article article);
+	PageInfo<Article> selects(Article articles,Integer pageNum,Integer pageSize);
+
+
 }

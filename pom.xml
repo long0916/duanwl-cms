@@ -31,18 +31,19 @@
 		<pagehelper-version>5.1.2</pagehelper-version>
 
 	</properties>
-  
-  <!-- jar依赖 -->
+
+	<!-- jar依赖 -->
 	<dependencies>
-		<!-- 依赖工具类 -->
+
+		<!-- 依赖自己jar -->
 		<!-- <dependency>
-			  	<groupId>com.duanwl</groupId>
-  				<artifactId>duanwl-common</artifactId>
-  				<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.duanwl</groupId>
+  			<artifactId>duanwl-common</artifactId>
+ 			 <version>0.0.1-SNAPSHOT</version>
 		</dependency> -->
-		
-	
-			<!-- spring 及springMVC -->
+
+
+		<!-- spring 及springMVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -230,8 +231,8 @@
 			<version>2.8.5</version>
 		</dependency>
 	</dependencies>
-  
-  <!-- 构建项目 -->
+
+	<!-- 构建项目 -->
 	<build>
 		<plugins>
 			<!-- jetty配置 -->
@@ -246,11 +247,29 @@
 						<!--项目路径 -->
 						<host>localhost</host>
 					</httpConnector>
+					<!-- 配置jetty虚拟路径 -->
+				     <contextHandlers>
+				      <jettyWebAppContext>
+				       <!--虚拟路径  访问路径-->
+				       <contextPath>/img/</contextPath>
+				       <!-- 物理路径 -->
+				      <resourceBase>d:/img/</resourceBase>
+				      </jettyWebAppContext>
+				     
+				     
+				     </contextHandlers>
 					<!-- 扫描的配置. 如果项目源码改变,1秒后重启jetty -->
 					<scanIntervalSeconds>1</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 
+			<!-- 生成site的插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7</version>
+			</plugin>
 		</plugins>
 	</build>
+
 </project>

@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.duanwl.cms.dao.ArticleMapper">
-	<!-- 查询文章中响应字段 -->
 	<resultMap type="Article" id="articleResultMap">
 		<id column="id" property="id" />
 		<result column="title" property="title" />
@@ -32,39 +31,60 @@
 		</association>
 
 	</resultMap>
-	<!-- 查询文章内容 -->
+
 	<select id="select" resultMap="articleResultMap">
-		select * from cms_article where id =#{id}
+
+		select * from cms_article where id
+		=#{id}
+
 	</select>
-	<!-- 查询列表 -->
-	<select id="selects" resultType="Article">
+
+	<select id="selects" resultMap="articleResultMap">
 		select * from cms_article
+
 		<where>
 			<!-- 根据文章作者查询 -->
 			<if test="userId!=null">
 				user_id =#{userId}
 			</if>
+
+			<!-- 根据文章审核状态查询 -->
+			<if test="status!=null">
+				and status =#{status}
+			</if>
+			<!-- 根据文章标题查询 -->
+			<if test="title!=null and title!=''">
+				and title like "%"#{title}"%"
+			</if>
 		</where>
+
+
 		order by created desc
+
 	</select>
 
-
-	<!-- 根据id查用户 -->
-	<select id="selectUserById" resultType="User">
-		select * from cms_user where id =#{id}
-	</select>
-	<!-- 根据id查类型 -->
-	<select id="selectChannelById" resultType="Channel">
-		select * from cms_channel where id =#{id}
-	</select>
-	<!-- 根据id查 -->
-	<select id="selectCategoryById" resultType="Category">
-		select * from cms_category where id =#{id}
-	</select>
 	<!-- 增加文章 -->
 	<insert id="insert">
-   		insert into cms_article(title,picture,content,channel_id,category_id,user_id,
-   		created,updated,content_type,status,hot,deleted) values(#{title},#{picture},#{content},#{channelId},#{categoryId},#{userId},
-   		#{created},#{updated},#{contentType},#{status},#{hot},#{deleted})
-   </insert>
+		insert into
+		cms_article(title,picture,content,channel_id,category_id,user_id,
+		created,updated,content_type,status,hot,deleted)
+		values(#{title},#{picture},#{content},#{channelId},#{categoryId},#{userId},
+		#{created},#{updated},#{contentType},#{status},#{hot},#{deleted})
+	</insert>
+
+	<select id="selectUserById" resultType="User">
+		select * from cms_user
+		where id =#{id}
+
+	</select>
+	<select id="selectChannelById" resultType="Channel">
+		select * from
+		cms_channel where id =#{id}
+
+	</select>
+	<select id="selectCategoryById" resultType="Category">
+		select * from
+		cms_category where id =#{id}
+
+	</select>
 </mapper>

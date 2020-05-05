@@ -29,4 +29,5 @@ public interface ChannelService {
 	 * @return: List<Category>
 	 */
 	List<Category> selectCategorysByChannelId(Integer channelId);
+	
 }

@@ -21,18 +21,14 @@ import com.duanwl.cms.service.ChannelService;
 @Service
 public class ChannelServiceImpl implements ChannelService{
 	@Resource
-	private ChannelMapper channelMapper;
-	/**
-	 * 查询所有栏目
-	 */
+	ChannelMapper channelMapper;
+
 	@Override
 	public List<Channel> selects() {
 		// TODO Auto-generated method stub
 		return channelMapper.selects();
 	}
-	/**
-	 * 根据栏目查类型
-	 */
+
 	@Override
 	public List<Category> selectCategorysByChannelId(Integer channelId) {
 		// TODO Auto-generated method stub

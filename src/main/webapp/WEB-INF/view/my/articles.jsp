@@ -14,19 +14,20 @@
 	<script type="text/javascript" src="/resource/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 	<div class="container">
 
 		<c:forEach items="${info.list}" var="article">
 
 			<div class="media">
-				<img src="/resource/images/2.png" class="mr-3 rounded" alt="..."
-					width="50px" height="50px">
+			    <!-- 文章标题图片 -->
+				<img src="/img/${article.picture }" class="mr-3 rounded" alt="..."
+					width="156px" height="101.8px">
 				<div class="media-body">
 					<h5 class="mt-0">${article.title }</h5>
 					<p><fmt:formatDate value="${article.created}" pattern="yyyy-MM-dd HH:mm:ss"/></p>
 					<div class="float-right">
-						<button type="button" class="btn btn-link" data-toggle="modal"
-						
+						<button type="button" class="btn btn-link " data-toggle="modal"
 							data-target="#exampleModalLong" onclick="detail(${article.id})">详情</button>
 					</div>
 				</div>
@@ -61,7 +62,9 @@
 			</div>
 		</div>
 	</div>
-	
+
+
+
 </body>
 <script type="text/javascript">
 //文章详情
@@ -74,13 +77,14 @@ function detail(id){
 		
 	})
 	
+	
 }
 
-	//分页 
-	function goPage(pageNum){
-		$("#center").load("/my/articles?pageNum="+pageNum);
-		
-	}
+//分页 
+function goPage(pageNum){
+	$("#center").load("/my/articles?pageNum="+pageNum);
+	
+}
 </script>
 	
 </html>
