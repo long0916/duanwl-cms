@@ -36,4 +36,5 @@ public interface ChannelMapper {
 	 * @return: List<Category>
 	 */
 	List<Category> selectCategorysByChannelId(Integer channelId);
+
 }

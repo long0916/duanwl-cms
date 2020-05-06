@@ -20,7 +20,6 @@ import com.github.pagehelper.PageInfo;
  */
 @Service
 public class ArticleServiceImpl implements ArticleService {
-
 	@Resource
 	ArticleMapper articleMapper;
 
@@ -44,6 +43,12 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return articleMapper.insert(article);
 	}
-	
+
+	@Override
+	public int update(Article article) {
+		// TODO Auto-generated method stub
+		return articleMapper.update(article);
+	}
+
 
 }

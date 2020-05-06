@@ -14,13 +14,22 @@ import com.duanwl.cms.domain.Article;
 public interface ArticleMapper { 
 	/**
 	 * 
-	 * @Title: selects 
-	 * @Description: 文章列表查询
-	 * @param articles
+	 * @Title: update 
+	 * @Description: 更新文章
+	 * @param article
 	 * @return
-	 * @return: List<Article>
+	 * @return: int
 	 */
-	List<Article> selects(Article articles);
+	int update(Article article);
+	/**
+	 * 
+	 * @Title: insert 
+	 * @Description: 增加文章
+	 * @param article
+	 * @return
+	 * @return: int
+	 */
+	int insert(Article article);
 	
 	/**
 	 * 
@@ -32,13 +41,14 @@ public interface ArticleMapper {
 	 */
 	Article select(Integer id);
 	
+	
 	/**
 	 * 
-	 * @Title: insert 
-	 * @Description: 增加文章
-	 * @param article
+	 * @Title: selects 
+	 * @Description: 文章的列表查询
+	 * @param articles
 	 * @return
-	 * @return: int
+	 * @return: List<Article>
 	 */
-	int insert(Article article);
+	List<Article> selects(Article articles);
 }

@@ -28,12 +28,11 @@
 			<div class="col-md-2 bg-light" style="height: 550px">
 
 				<div class="list-group text-center">
-					<a href="#" data="/admin/articles" class="list-group-item list-group-item-action active">
-						审核文章 </a> <a href="#" data="/admin/publish" class="list-group-item list-group-item-action">
-						管理用户</a> 
-					 <a href="#"
-						class="list-group-item list-group-item-action disabled"
-						tabindex="-1" aria-disabled="true">系统设置</a>
+					<a href="#" data="/admin/articles"
+						class="list-group-item list-group-item-action active"> 审核文章</a> <a
+						href="#" data="/admin/users"
+						class="list-group-item list-group-item-action"> 管理用户</a> <a
+						href="#"  data="/admin/settings" class="list-group-item list-group-item-action">系统设置</a>
 				</div>
 
 			</div>
