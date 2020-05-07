@@ -36,11 +36,11 @@
 	<dependencies>
 
 		<!-- 依赖自己jar -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.duanwl</groupId>
   			<artifactId>duanwl-common</artifactId>
  			 <version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
+		</dependency>
 
 
 		<!-- spring 及springMVC -->
