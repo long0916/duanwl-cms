@@ -2,6 +2,7 @@ package com.duanwl.cms.service.impl;
 
 import java.util.List;
 
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -10,16 +11,15 @@ import com.duanwl.cms.dao.ChannelMapper;
 import com.duanwl.cms.domain.Category;
 import com.duanwl.cms.domain.Channel;
 import com.duanwl.cms.service.ChannelService;
-
 /**
  * 
  * @ClassName: ChannelServiceImpl 
- * @Description: 栏目service实现类
+ * @Description: TODO
  * @author: 段文龙
- * @date: 2020年4月29日 下午6:02:33
+ * @date: 2020年5月8日 下午7:05:21
  */
 @Service
-public class ChannelServiceImpl implements ChannelService{
+public class ChannelServiceImpl implements ChannelService {
 	@Resource
 	ChannelMapper channelMapper;
 
@@ -34,4 +34,5 @@ public class ChannelServiceImpl implements ChannelService{
 		// TODO Auto-generated method stub
 		return channelMapper.selectCategorysByChannelId(channelId);
 	}
+
 }

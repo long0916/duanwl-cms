@@ -2,6 +2,7 @@ package com.duanwl.cms.service.impl;
 
 import java.util.List;
 
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -14,19 +15,19 @@ import com.github.pagehelper.PageInfo;
 /**
  * 
  * @ClassName: ArticleServiceImpl 
- * @Description: service实现类
+ * @Description: TODO
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:51:01
+ * @date: 2020年5月8日 下午7:05:16
  */
 @Service
 public class ArticleServiceImpl implements ArticleService {
+
 	@Resource
 	ArticleMapper articleMapper;
 
 	@Override
 	public PageInfo<Article> selects(Article articles, Integer pageNum, Integer pageSize) {
 		PageHelper.startPage(pageNum, pageSize);
-		
 		List<Article> list = articleMapper.selects(articles);
 		
 		return new PageInfo<Article>(list);

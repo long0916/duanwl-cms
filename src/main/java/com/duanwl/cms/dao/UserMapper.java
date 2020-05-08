@@ -1,17 +1,40 @@
 package com.duanwl.cms.dao;
+
+import java.util.List;
+
+
+import com.duanwl.cms.domain.User;
 /**
  * 
  * @ClassName: UserMapper 
  * @Description: 用户
  * @author: 段文龙
- * @date: 2020年5月6日 下午6:20:44
+ * @date: 2020年5月8日 下午7:04:28
  */
-
-import java.util.List;
-
-import com.duanwl.cms.domain.User;
-
 public interface UserMapper {
+	/**
+	 * 
+	 * @Title: selectByName 
+	 * @Description: 根据用户名称查询用户
+	 * @param username
+	 * @return
+	 * @return: User
+	 */
+	User selectByName(String username);
+	
+	
+	/**
+	 * 
+	 * @Title: insert 
+	 * @Description: 注册
+	 * @param user
+	 * @return
+	 * @return: int
+	 */
+	int insert(User user);
+	
+	
+
 	/**
 	 * 
 	 * @Title: selects 

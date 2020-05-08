@@ -1,22 +1,20 @@
 package com.duanwl.cms.service;
 
-import java.util.List;
-
 import com.duanwl.cms.domain.Article;
 import com.github.pagehelper.PageInfo;
 
 /**
  * 
  * @ClassName: ArticleService 
- * @Description: service接口
+ * @Description: 
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:50:12
+ * @date: 2020年4月27日 下午4:54:27
  */
 public interface ArticleService {
-	/**
+	/*
 	 * 
 	 * @Title: update 
-	 * @Description:更新文章
+	 * @Description: 更新文章
 	 * @param article
 	 * @return
 	 * @return: int
@@ -53,5 +51,4 @@ public interface ArticleService {
 	 * @return: PageInfo<Article>
 	 */
 	PageInfo<Article> selects(Article articles,Integer pageNum,Integer pageSize);
-
 }

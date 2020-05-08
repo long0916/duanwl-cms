@@ -1,16 +1,35 @@
 package com.duanwl.cms.service;
-/**
- * 
- * @ClassName: UserService 
- * @Description: 用户service
- * @author: 段文龙
- * @date: 2020年5月6日 下午6:29:28
- */
 
 import com.duanwl.cms.domain.User;
 import com.github.pagehelper.PageInfo;
-
+/**
+ * 
+ * @ClassName: UserService 
+ * @Description: TODO
+ * @author: 段文龙
+ * @date: 2020年5月8日 下午7:05:07
+ */
 public interface UserService {
+	
+	/**
+	 * 
+	 * @Title: selectByName 
+	 * @Description: 根据用户名称查询用户
+	 * @param username
+	 * @return
+	 * @return: User
+	 */
+	User selectByName(String username);
+	/**
+	 * 
+	 * @Title: insert 
+	 * @Description: 注册
+	 * @param user
+	 * @return
+	 * @return: int
+	 */
+	int insert(User user);
+
 	/**
 	 * 
 	 * @Title: selects 
@@ -29,4 +48,13 @@ public interface UserService {
 	 * @return: void
 	 */
 	int update(User user);
+	/**
+	 * 
+	 * @Title: login 
+	 * @Description: TODO
+	 * @param user
+	 * @return
+	 * @return: User
+	 */
+	User  login(User user);
 }

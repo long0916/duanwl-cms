@@ -15,6 +15,7 @@
 
 </head>
 <body>
+<body>
 	<div class="container-fluid">
 		<!--  head -->
 		<div class="row" style="height: 34px">

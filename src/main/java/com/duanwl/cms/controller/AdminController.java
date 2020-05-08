@@ -2,6 +2,7 @@ package com.duanwl.cms.controller;
 
 import javax.annotation.Resource;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,10 +15,17 @@ import com.duanwl.cms.domain.User;
 import com.duanwl.cms.service.ArticleService;
 import com.duanwl.cms.service.UserService;
 import com.github.pagehelper.PageInfo;
-
+/**
+ * 
+ * @ClassName: AdminController 
+ * @Description: 管理员controller
+ * @author: 段文龙
+ * @date: 2020年5月8日 下午7:03:05
+ */
 @RequestMapping("admin")
 @Controller
 public class AdminController {
+	
 	@Resource
 	private ArticleService articleService;
 	@Resource
@@ -123,5 +131,4 @@ public class AdminController {
 	
 		return articleService.update(article)>0;
 	}
-	
 }

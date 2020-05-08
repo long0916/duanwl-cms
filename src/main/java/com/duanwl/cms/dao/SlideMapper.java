@@ -1,21 +1,22 @@
 package com.duanwl.cms.dao;
 
-
 import java.util.List;
+
 
 import com.duanwl.cms.domain.Slide;
 /**
  * 
- * @ClassName: slideMapper 
- * @Description: TODO
+ * @ClassName: SlideMapper 
+ * @Description: Slidemapper
  * @author: 段文龙
- * @date: 2020年5月7日 下午4:14:53
+ * @date: 2020年5月8日 下午7:04:06
  */
 public interface SlideMapper {
+
 	/**
 	 * 
 	 * @Title: selects 
-	 * @Description: 查询所有
+	 * @Description: TODO
 	 * @return
 	 * @return: List<Slide>
 	 */

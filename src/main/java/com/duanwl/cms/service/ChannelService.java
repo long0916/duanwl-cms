@@ -2,14 +2,15 @@ package com.duanwl.cms.service;
 
 import java.util.List;
 
+
 import com.duanwl.cms.domain.Category;
 import com.duanwl.cms.domain.Channel;
 /**
  * 
  * @ClassName: ChannelService 
- * @Description: 栏目service
+ * @Description: TODO
  * @author: 段文龙
- * @date: 2020年4月29日 下午6:02:06
+ * @date: 2020年5月8日 下午7:04:57
  */
 public interface ChannelService {
 	/**
@@ -29,5 +30,5 @@ public interface ChannelService {
 	 * @return: List<Category>
 	 */
 	List<Category> selectCategorysByChannelId(Integer channelId);
-	
+
 }

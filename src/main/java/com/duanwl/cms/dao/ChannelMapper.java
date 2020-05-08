@@ -1,22 +1,17 @@
 package com.duanwl.cms.dao;
-/**
- * 
- * @ClassName: ChannelMapper 
- * @Description: 栏目
- * @author: 段文龙
- * @date: 2020年4月29日 下午5:52:43
- */
 
 import java.util.List;
 
+
 import com.duanwl.cms.domain.Category;
 import com.duanwl.cms.domain.Channel;
+
 /**
  * 
  * @ClassName: ChannelMapper 
  * @Description: 栏目
  * @author: 段文龙
- * @date: 2020年4月29日 下午5:58:13
+ * @date: 2020年4月29日 下午4:31:14
  */
 public interface ChannelMapper {
 	/**
