@@ -5,9 +5,9 @@ import java.io.Serializable;
 /**
  * 
  * @ClassName: Category 
- * @Description: 栏目分类表
+ * @Description: 栏目分类
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:46:01
+ * @date: 2020年4月27日 下午3:35:31
  */
 public class Category  implements Serializable{
 	

@@ -11,13 +11,7 @@ import com.duanwl.cms.dao.ChannelMapper;
 import com.duanwl.cms.domain.Category;
 import com.duanwl.cms.domain.Channel;
 import com.duanwl.cms.service.ChannelService;
-/**
- * 
- * @ClassName: ChannelServiceImpl 
- * @Description: TODO
- * @author: 段文龙
- * @date: 2020年5月8日 下午7:05:21
- */
+
 @Service
 public class ChannelServiceImpl implements ChannelService {
 	@Resource

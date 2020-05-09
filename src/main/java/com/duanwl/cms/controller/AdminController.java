@@ -15,13 +15,7 @@ import com.duanwl.cms.domain.User;
 import com.duanwl.cms.service.ArticleService;
 import com.duanwl.cms.service.UserService;
 import com.github.pagehelper.PageInfo;
-/**
- * 
- * @ClassName: AdminController 
- * @Description: 管理员controller
- * @author: 段文龙
- * @date: 2020年5月8日 下午7:03:05
- */
+
 @RequestMapping("admin")
 @Controller
 public class AdminController {

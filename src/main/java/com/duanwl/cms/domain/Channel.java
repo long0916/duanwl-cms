@@ -5,9 +5,9 @@ import java.io.Serializable;
 /**
  * 
  * @ClassName: Channel 
- * @Description: 文章栏目表
+ * @Description: 文章栏目
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:45:43
+ * @date: 2020年4月27日 下午3:33:52
  */
 public class Channel implements Serializable{
 	/**

@@ -12,13 +12,7 @@ import com.duanwl.cms.domain.Article;
 import com.duanwl.cms.service.ArticleService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-/**
- * 
- * @ClassName: ArticleServiceImpl 
- * @Description: TODO
- * @author: 段文龙
- * @date: 2020年5月8日 下午7:05:16
- */
+
 @Service
 public class ArticleServiceImpl implements ArticleService {
 

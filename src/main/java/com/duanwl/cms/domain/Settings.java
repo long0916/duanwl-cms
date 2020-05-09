@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @ClassName: Settings 
  * @Description: 系统配置表
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:45:23
+ * @date: 2020年3月3日 上午11:39:58
  */
 public class Settings implements Serializable {
 	/**

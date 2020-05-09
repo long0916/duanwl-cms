@@ -4,13 +4,7 @@ import java.util.List;
 
 
 import com.duanwl.cms.domain.User;
-/**
- * 
- * @ClassName: UserMapper 
- * @Description: 用户
- * @author: 段文龙
- * @date: 2020年5月8日 下午7:04:28
- */
+
 public interface UserMapper {
 	/**
 	 * 

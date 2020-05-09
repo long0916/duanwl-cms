@@ -13,9 +13,9 @@ import java.util.Date;
 /**
  * 
  * @ClassName: User 
- * @Description: 用户表
+ * @Description: 用户
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:44:41
+ * @date: 2020年4月27日 下午3:30:38
  */
 public class User implements Serializable {
 	
@@ -34,12 +34,14 @@ public class User implements Serializable {
 	private Integer id;
 	private String username;
 	private String password;
+	private String repassword;//确认密码。冗余属性
 	private String nickname;//昵称
 	private Date birthday;
 	private Integer gender;//性别 0:女 1：男
 	private Integer locked;//0:正常 1：禁用
 	private Date created;//创建时间
 	private Date updated;//修改时间
+	private Integer role;//角色。 1：管理员  0：普通用户
 	public Integer getId() {
 		return id;
 	}
@@ -54,6 +56,19 @@ public class User implements Serializable {
 	}
 	public String getPassword() {
 		return password;
+	}
+	
+	public Integer getRole() {
+		return role;
+	}
+	public void setRole(Integer role) {
+		this.role = role;
+	}
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
 	public void setPassword(String password) {
 		this.password = password;

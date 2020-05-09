@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @ClassName: Slide 
  * @Description: 广告表
  * @author: 段文龙
- * @date: 2020年4月27日 下午5:44:55
+ * @date: 2020年3月3日 上午11:36:20
  */
 public class Slide implements Serializable{
 

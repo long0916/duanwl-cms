@@ -10,21 +10,41 @@
 <title>Insert title here</title>
 	<link href="/resource/css/bootstrap.min.css" rel="stylesheet">
 	<script type="text/javascript" src="/resource/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="/resource/js/popper.min.js"></script>
 	<script type="text/javascript" src="/resource/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
 
-		<!-- head -->
-		<div class="row">
-			<div class="col-md-12"
-				style="background-color: #5B5B5B; height: 50px">
-				<img alt="" src="/resource/images/8.png" width="50px"
-					height="50px"> <font color="white">管理员中心</font>
+		<div class="row bg-dark">
+			<div class="col-md-12" style="height: 50px">
+				<a href="/"><img alt="" src="/resource/images/logo-admin.jpg"
+					class="rounded-circle"></a>
+					<font color="white">管理员中心</font>
+					<!-- 如果用户登录显示登录信息 -->
+				<c:if test="${sessionScope.user!=null }">
+					<div class="float-right">
+						<div class="btn-group dropleft">
+							<button type="button" class="btn btn-dark dropdown-toggle"
+								data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">${sessionScope.user.username }</button>
+							<div class="dropdown-menu">
+
+								<a class="dropdown-item" href="/">首页</a> <a
+									class="dropdown-item" href="#">头条产品</a>
+									<a
+									class="dropdown-item" href="/passport/logout">注销</a>
+							</div>
+						</div>
+
+					</div>
+				</c:if>
 			</div>
 
 		</div>
+
 		<div class="row mt-1">
+
 			<div class="col-md-2 bg-light" style="height: 550px">
 
 				<div class="list-group text-center">
@@ -36,17 +56,13 @@
 				</div>
 
 			</div>
-			 <!-- 中间内容区域 -->
-			<div class="col-md-10" id="center">
-			 <!-- 提前引入kindeditor -->
-			<div style="display: none">
-			  <jsp:include page="/resource/kindeditor/jsp/demo.jsp"/>
-			</div>
-			
-			
-			</div>
+
+			<div class="col-md-10" id="center"></div>
+
 		</div>
+
 	</div>
+
 </body>
 	<script type="text/javascript">
 		//文档就绪函数

@@ -5,13 +5,7 @@ import java.util.List;
 
 import com.duanwl.cms.domain.Category;
 import com.duanwl.cms.domain.Channel;
-/**
- * 
- * @ClassName: ChannelService 
- * @Description: TODO
- * @author: 段文龙
- * @date: 2020年5月8日 下午7:04:57
- */
+
 public interface ChannelService {
 	/**
 	 * 
