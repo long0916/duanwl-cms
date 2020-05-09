@@ -1,5 +1,7 @@
 package com.duanwl.cms.service;
 
+import java.util.List;
+
 import com.duanwl.cms.domain.Article;
 import com.github.pagehelper.PageInfo;
 
@@ -51,4 +53,13 @@ public interface ArticleService {
 	 * @return: PageInfo<Article>
 	 */
 	PageInfo<Article> selects(Article articles,Integer pageNum,Integer pageSize);
+	/**
+	 * 
+	 * @Title: selects 
+	 * @Description: 按照评论数量显示文章
+	 * @param articles
+	 * @return
+	 * @return: List<Article>
+	 */
+	PageInfo<Article> selectsOrderComments(Article articles,Integer pageNum,Integer pageSize);
 }

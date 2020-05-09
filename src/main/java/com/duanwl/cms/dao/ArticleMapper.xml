@@ -32,6 +32,10 @@
 		</association>
 
 	</resultMap>
+	<!-- 按照评论次数排序 -->
+	<select id="selectsOrderComments" resultMap="articleResultMap">
+		select * from cms_article order by comments desc
+	</select>
 
 	<select id="select" resultMap="articleResultMap">
 
