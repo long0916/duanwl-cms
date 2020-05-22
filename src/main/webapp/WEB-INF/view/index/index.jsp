@@ -145,8 +145,8 @@
 										</h5>
 										<p class="mt-4">${article.user.username}·
 											0评论 ·
-											<fmt:formatDate value="${article.created}"
-												pattern="yyyy-MM-dd HH:mm:ss" />
+											${article.formateDate}"
+											
 										</p>
 
 									</div></li>
@@ -189,8 +189,8 @@
 										</h5>
 										<p class="mt-4">${article.user.username}·
 											0评论 ·
-											<fmt:formatDate value="${article.created}"
-												pattern="yyyy-MM-dd HH:mm:ss" />
+											${article.formateDate}
+											
 										</p>
 
 									</div></li>

@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <!-- 视窗 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="${article.keywords }">
+<meta name="description" content="${article.summary }">
 <title>${article.title }</title>
 <link href="/resource/css/bootstrap.min.css" rel="stylesheet">
 	<script type="text/javascript" src="/resource/jquery-3.2.1.js"></script>
@@ -45,6 +47,7 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-7">
 			  <h1>${article.title }</h1>
+			  文章来源：${article.original }(微信号：${article.wechat})
 			  <p>${article.user.username}·<fmt:formatDate value="${article.created}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
 			   <p>
 			    ${article.content }
@@ -100,7 +103,7 @@
 
 
 	</div>
-
+ 文章来源：${article.original }(微信号：${article.wechat})
 </body>
 <script type="text/javascript">
 	function add(articleId) {

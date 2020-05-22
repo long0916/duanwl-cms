@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.duanwl.cms.dao.ArticleMapper;
 import com.duanwl.cms.domain.Article;
 import com.duanwl.cms.service.ArticleService;
+import com.duanwl.common.utils.DateUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -23,7 +24,9 @@ public class ArticleServiceImpl implements ArticleService {
 	public PageInfo<Article> selects(Article articles, Integer pageNum, Integer pageSize) {
 		PageHelper.startPage(pageNum, pageSize);
 		List<Article> list = articleMapper.selects(articles);
-		
+			for (Article article : list) {
+				article.setFormateDate(DateUtil.getDisplayTime(article.getCreated()));
+			}
 		return new PageInfo<Article>(list);
 	}
 

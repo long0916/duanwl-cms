@@ -40,7 +40,37 @@ public class Article  implements Serializable{
 	
 	private Integer comments;//评论数量
 	
+	private String keywords;
+	private String original;
+	private String formateDate;//人性化时间
+	private String wechat;//微信号
 	
+	
+	
+	public String getWechat() {
+		return wechat;
+	}
+	public void setWechat(String wechat) {
+		this.wechat = wechat;
+	}
+	public String getFormateDate() {
+		return formateDate;
+	}
+	public void setFormateDate(String formateDate) {
+		this.formateDate = formateDate;
+	}
+	public String getKeywords() {
+		return keywords;
+	}
+	public void setKeywords(String keywords) {
+		this.keywords = keywords;
+	}
+	public String getOriginal() {
+		return original;
+	}
+	public void setOriginal(String original) {
+		this.original = original;
+	}
 	public Integer getComments() {
 		return comments;
 	}
