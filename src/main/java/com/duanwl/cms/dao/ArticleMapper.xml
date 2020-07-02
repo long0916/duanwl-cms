@@ -35,6 +35,29 @@
 		</association>
 
 	</resultMap>
+	
+	
+	<resultMap type="Article" id="mapVo">
+		<id column="id" property="id" />
+		<result column="title" property="title" />
+		<result column="content" property="content" />
+		<result column="picture" property="picture" />
+		<result column="channel_id" property="channelId" />
+		<result column="category_id" property="categoryId" />
+		<result column="user_id" property="userId" />
+		<result column="hits" property="hits" />
+		<result column="hot" property="hot" />
+		<result column="status" property="status" />
+		<result column="deleted" property="deleted" />
+		<result column="created" property="created" />
+		<result column="updated" property="updated" />
+		<result column="keywords" property="keywords" />
+		<result column="original" property="original" />
+		<result column="wechat" property="wechat" />
+		<result column="content_type" property="contentType" />
+		
+
+	</resultMap>
 	<!-- 按照评论次数排序 -->
 	<select id="selectsOrderComments" resultMap="articleResultMap">
 		select * from cms_article order by comments desc
@@ -45,6 +68,10 @@
 		select * from cms_article where id
 		=#{id}
 
+	</select>
+	
+	<select id="findAll" resultMap="mapVo">
+		select * from cms_article where status=1
 	</select>
 
 	<select id="selects" resultMap="articleResultMap">

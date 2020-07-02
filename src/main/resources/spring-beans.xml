@@ -10,7 +10,8 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 
-
+	<!-- 导入es的配置 -->
+   	<import resource="classpath:spring-elasticsearch.xml"/>
 	<!-- 1、注解扫描器 -->
 	<context:component-scan base-package="com.duanwl.cms" >
 		<!-- 排除要要扫描的controller -->

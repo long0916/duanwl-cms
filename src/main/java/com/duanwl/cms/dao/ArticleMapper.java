@@ -52,6 +52,14 @@ public interface ArticleMapper {
 	 * @return: List<Article>
 	 */
 	List<Article> selects(Article articles);
+	/**
+	 * 
+	 * @Title: findAll 
+	 * @Description: 查询所有文章
+	 * @return
+	 * @return: List<Article>
+	 */
+	List<Article> findAll();
 	
 	
 	/**

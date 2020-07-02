@@ -3,6 +3,9 @@ package com.duanwl.cms.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 /**
  * 
  * @ClassName: Article 
@@ -10,6 +13,7 @@ import java.util.Date;
  * @author: 段文龙
  * @date: 2020年4月27日 下午3:37:15
  */
+@Document(indexName = "duanwl_cms",type = "article")
 public class Article  implements Serializable{
 	
 	/**
@@ -18,7 +22,7 @@ public class Article  implements Serializable{
 	 * @Description: TODO
 	 */
 	private static final long serialVersionUID = 1L;
-
+	@Id
 	private Integer id;
 	private String title;//文章标题
 	private String summary;//摘要

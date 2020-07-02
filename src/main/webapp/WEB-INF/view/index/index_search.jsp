@@ -141,7 +141,7 @@
 					<!-- 热点文章 -->
 					<div class="mt-3">
 						<ul class="list-unstyled">
-							<c:forEach items="${info.list}" var="article">
+							<c:forEach items="${info.content}" var="article">
 								<li class="media"><img src="/img/${article.picture}"
 									class="mr-3 rounded" alt="..."
 									style="height: 101.8px; width: 156px">
@@ -160,7 +160,19 @@
 							</c:forEach>
 
 						</ul>
-						<jsp:include page="/WEB-INF/view/common/pages.jsp" />
+						<%-- <jsp:include page="/WEB-INF/view/common/pages.jsp" /> --%>
+										<tr>
+					<td colspan="100"><c:if test="${pageInfo.pageNum!=1}">
+								<a
+									href="${pageContext.request.contextPath}/goods/list?pageNum=${pageInfo.pageNum-1>1?pageInfo.pageNum-1:1}">上一页</a>
+							</c:if> <c:forEach var="p" items="${pageInfo.navigatepageNums}">
+								<a
+									href="${pageContext.request.contextPath}/goods/list?pageNum=${p}">${p}</a>
+							</c:forEach> <c:if test="${pageInfo.pageNum!=pageInfo.pages}">
+								<a
+									href="${pageContext.request.contextPath}/goods/list?pageNum=${pageInfo.pageNum+1>pageInfo.pages?pageInfo.pages:pageInfo.pageNum+1}">下一页</a>
+							</c:if></td>
+					</tr>
 					</div>
 
 

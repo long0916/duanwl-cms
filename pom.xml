@@ -7,7 +7,7 @@
   
   <!-- 定义主要版本号 -->
 	<properties>
-		<spring.version>5.1.5.RELEASE</spring.version>
+		<spring.version>5.2.6.RELEASE</spring.version>
 		<mybatis.version>3.4.2</mybatis.version>
 		<log4j.version>1.2.17</log4j.version>
 		<log4japi.version>1.7.26</log4japi.version>
@@ -41,7 +41,12 @@
   			<artifactId>duanwl-common</artifactId>
  			 <version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		<!-- spring-data-elasticsearch/内嵌入的spring版本5.2.6版本 -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+			<version>3.2.7.RELEASE</version>
+		</dependency>
 
 		<!-- spring 及springMVC -->
 		<dependency>
@@ -235,11 +240,22 @@
 	<!-- 构建项目 -->
 	<build>
 		<plugins>
+			<!-- maven 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
 			<!-- jetty配置 -->
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.3.7.v20160115</version>
+				<version>9.4.28.v20200408</version>
 				<configuration>
 					<httpConnector>
 						<!-- 项目端口号 -->
